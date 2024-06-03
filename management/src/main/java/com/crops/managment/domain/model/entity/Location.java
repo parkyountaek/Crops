@@ -5,11 +5,13 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.UUID;
 
 @Getter
 @Entity
+@ToString
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Table(name = "locations")
 public class Location extends DateTimeBaseEntity { // 재배 지역 정보

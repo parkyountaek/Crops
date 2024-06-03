@@ -25,6 +25,7 @@ public class Crop extends DateTimeBaseEntity {
     @Column(name = "name", nullable = false)
     private String name;
 
+    @Embedded
     private CropType cropType;
 
     @OneToMany(fetch = FetchType.LAZY)

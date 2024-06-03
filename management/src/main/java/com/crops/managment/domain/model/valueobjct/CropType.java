@@ -2,8 +2,12 @@ package com.crops.managment.domain.model.valueobjct;
 
 import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+@ToString
+@EqualsAndHashCode
 @NoArgsConstructor
 @AllArgsConstructor
 public class CropType {

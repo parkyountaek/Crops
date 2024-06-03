@@ -3,18 +3,14 @@ package com.crops.managment.domain.model.converter;
 import com.crops.managment.domain.model.valueobjct.Range;
 import com.crops.managment.domain.model.valueobjct.UnitType;
 import jakarta.persistence.AttributeConverter;
+import jakarta.persistence.Converter;
 
 import java.util.Objects;
 
-public class RangeConverter implements AttributeConverter<String, Range> {
-    private final UnitType unitType;
-
-    public RangeConverter(UnitType unitType) {
-        this.unitType = unitType;
-    }
-
+@Converter(autoApply = true)
+public class RangeConverter implements AttributeConverter<Range, String> {
     @Override
-    public Range convertToDatabaseColumn(String attribute) {
+    public Range convertToEntityAttribute(String attribute) {
         if(Objects.isNull(attribute))
             return null;
         String[] split = attribute.split(" ");
@@ -26,7 +22,9 @@ public class RangeConverter implements AttributeConverter<String, Range> {
     }
 
     @Override
-    public String convertToEntityAttribute(Range dbData) {
-        return String.format("%f~%f %s", dbData.getFrom(), dbData.getTo(), this.unitType);
+    public String convertToDatabaseColumn(Range dbData) {
+        if(Objects.isNull(dbData))
+            return null;
+        return String.format("%f~%f %s", dbData.getFrom(), dbData.getTo(), dbData.getUnit());
     }
 }

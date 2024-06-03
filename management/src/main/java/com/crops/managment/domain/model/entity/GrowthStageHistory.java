@@ -6,12 +6,14 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.Date;
 import java.util.UUID;
 
 @Getter
 @Entity
+@ToString
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Table(name = "growth_stages")
 public class GrowthStageHistory extends DateTimeBaseEntity { // 농작물 재배 단계

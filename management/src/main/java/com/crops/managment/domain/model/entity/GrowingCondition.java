@@ -7,11 +7,13 @@ import jakarta.persistence.*;
 import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 import java.util.UUID;
 
 @Getter
 @Entity
+@ToString
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Table(name = "growing_condition")
 public class GrowingCondition extends DateTimeBaseEntity { // 재배 조건
