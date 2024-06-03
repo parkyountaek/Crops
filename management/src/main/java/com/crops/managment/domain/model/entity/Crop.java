@@ -1,5 +1,6 @@
 package com.crops.managment.domain.model.entity;
 
+import com.crops.managment.domain.model.entity.embeded.DateTimeBaseEntity;
 import com.crops.managment.domain.model.valueobjct.CropType;
 import jakarta.persistence.*;
 import lombok.Getter;
@@ -15,7 +16,7 @@ import java.util.UUID;
 @Entity
 @Table(name = "crops")
 @ToString
-public class Crop {
+public class Crop extends DateTimeBaseEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "crop_id", updatable = false, nullable = false)

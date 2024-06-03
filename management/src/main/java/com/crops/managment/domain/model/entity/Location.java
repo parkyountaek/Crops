@@ -1,18 +1,18 @@
 package com.crops.managment.domain.model.entity;
 
+import com.crops.managment.domain.model.entity.embeded.DateTimeBaseEntity;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
 import java.util.UUID;
 
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Table(name = "locations")
-public class Location { // 재배 지역 정보
+public class Location extends DateTimeBaseEntity { // 재배 지역 정보
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID locationId;

@@ -1,8 +1,9 @@
 package com.crops.managment.domain.model.entity;
 
+import com.crops.managment.domain.model.entity.embeded.DateTimeBaseEntity;
 import com.crops.managment.domain.model.valueobjct.GrowthStage;
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
+import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
@@ -10,11 +11,10 @@ import java.util.Date;
 import java.util.UUID;
 
 @Getter
-@NoArgsConstructor
-@AllArgsConstructor
 @Entity
+@NoArgsConstructor(access = AccessLevel.PRIVATE)
 @Table(name = "growth_stages")
-public class GrowthStageHistory { // 농작물 재배 단계
+public class GrowthStageHistory extends DateTimeBaseEntity { // 농작물 재배 단계
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID growthStageId;
