@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="201d0ad2-b881-43d4-af67-4f1a1cec9c90" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/HELP.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/ManagementApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/converter/RangeConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/entity/Crop.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/entity/GrowingCondition.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/entity/GrowthStageHistory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/entity/Location.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/entity/PestsDisease.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/entity/embeded/CreateDateTimeBaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/entity/embeded/DateTimeBaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/repository/CropRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/repository/LocationRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/valueobjct/CropType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/valueobjct/GrowthStage.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/valueobjct/Range.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/valueobjct/UnitType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/main/resources/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/management/src/test/java/com/crops/managment/domain/model/repository/CropRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/settings.gradle" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <task path="$PROJECT_DIR$/management">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="crop-application" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+        <option value="Enum" />
+        <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2eozG0HbwWSbf0RsoC3Zr0qnzkt" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "git-widget-placeholder": "feature/management",
+    "jdk.selected.JAVA_MODULE": "17",
+    "last_opened_file_path": "/Users/pyt/projects/crops-application"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/management/src/main/java/com/crops/managment/domain/model/model/entity" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.crops.managment.domain.model.repository" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.crops.managment.domain.model.model.valudobject" />
+      <recent name="com.crops.managment.domain.model.entity.embeded" />
+      <recent name="com.crops.managment.domain.model.valueobjct" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.com.crops.managment.domain.model.repository.* and 1 more">
+    <configuration name="ManagementApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.crops.managment.ManagementApplication" />
+      <module name="crops-system.management.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.crops.managment.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CropRepositoryTest.test" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":management:test" />
+            <option value="--tests" />
+            <option value="&quot;com.crops.managment.domain.model.repository.CropRepositoryTest.test&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <ForceTestExec>true</ForceTestExec>
+      <method v="2" />
+    </configuration>
+    <configuration name="com.crops.managment.domain.model.repository.* and 1 more" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="crops-system.management.main" />
+      <option name="TEST_OBJECT" value="pattern" />
+      <patterns>
+        <pattern testClass="com.crops.managment.domain.model.repository.*" />
+        <pattern testClass="com.crops.managment.domain.model.entity.*" />
+      </patterns>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.com.crops.managment.domain.model.repository.* and 1 more" />
+        <item itemvalue="Gradle.CropRepositoryTest.test" />
+        <item itemvalue="Application.ManagementApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="201d0ad2-b881-43d4-af67-4f1a1cec9c90" name="Changes" comment="" />
+      <created>1712585618988</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712585618988</updated>
+    </task>
+    <servers />
+  </component>
+</project>
