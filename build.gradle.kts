@@ -1,47 +1,40 @@
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+
 plugins {
-	id("org.springframework.boot") version "3.3.1"
-	id("io.spring.dependency-management") version "1.1.5"
-	kotlin("plugin.jpa") version "1.9.24"
-	kotlin("jvm") version "1.9.24"
-	kotlin("plugin.spring") version "1.9.24"
+	id("org.springframework.boot") version "3.1.0"
+	id("io.spring.dependency-management") version "1.1.0"
+
+	val kotlinVersion = "1.8.10"
+	kotlin("jvm") version kotlinVersion
+	kotlin("plugin.spring") version kotlinVersion
 }
 
-group = "com"
-version = "0.0.1-SNAPSHOT"
+allprojects {
+	group = "com.crop.application"
+	version = "0.0.1-SNAPSHOT"
 
-java {
-	toolchain {
-		languageVersion = JavaLanguageVersion.of(17)
+	repositories {
+		mavenCentral()
 	}
 }
 
-configurations {
-	compileOnly {
-		extendsFrom(configurations.annotationProcessor.get())
+subprojects {
+	apply(plugin = "kotlin")
+	apply(plugin = "kotlin-spring")
+
+	dependencies {
+		implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+		implementation("org.jetbrains.kotlin:kotlin-reflect")
 	}
-}
 
-repositories {
-	mavenCentral()
-}
-
-dependencies {
-	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-	implementation("org.jetbrains.kotlin:kotlin-reflect")
-	compileOnly("org.projectlombok:lombok")
-	runtimeOnly("com.h2database:h2")
-	annotationProcessor("org.projectlombok:lombok")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("org.jetbrains.kotlin:kotlin-test-junit5")
-	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-}
-
-kotlin {
-	compilerOptions {
-		freeCompilerArgs.addAll("-Xjsr305=strict")
+	tasks.withType<Test> {
+		useJUnitPlatform()
 	}
-}
 
-tasks.withType<Test> {
-	useJUnitPlatform()
+	tasks.withType<KotlinCompile> {
+		kotlinOptions {
+			freeCompilerArgs = listOf("-Xjsr305=strict")
+			jvmTarget = "17"
+		}
+	}
 }

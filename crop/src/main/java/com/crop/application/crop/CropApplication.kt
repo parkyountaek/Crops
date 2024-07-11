@@ -1,4 +1,4 @@
-package com.crop_application
+package com.crop.application.crop
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -7,5 +7,5 @@ import org.springframework.boot.runApplication
 class CropApplication
 
 fun main(args: Array<String>) {
-	runApplication<CropApplication>(*args)
+    runApplication<CropApplication>(*args)
 }

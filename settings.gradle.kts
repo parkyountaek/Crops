@@ -1,1 +1,2 @@
-rootProject.name = "crop-application"
+rootProject.name = "crop.application"
+include("crop")
