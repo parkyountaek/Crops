@@ -26,6 +26,7 @@ build/
 !**/test/**/build
 *.iml
 !**/testData/**/*.iml
+.idea/workspace.xml
 .idea/artifacts
 .idea/remote-targets.xml
 .idea/libraries/Gradle*.xml
