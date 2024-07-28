@@ -1,4 +1,4 @@
-package crop.application.domain.user
+package crop.application.domain.model.user
 
 class User(
     val userId: Long,
