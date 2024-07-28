@@ -6,6 +6,8 @@ plugins {
 	kotlin("jvm") version "1.8.0"
 	kotlin("plugin.spring") version "1.8.0"
 	kotlin("plugin.jpa") version "1.8.0"
+	kotlin("plugin.allopen") version "1.8.0"
+	kotlin("plugin.noarg") version "1.8.0"
 	kotlin("kapt") version "1.8.0"
 	id("com.google.protobuf") version "0.9.3"
 }
@@ -71,6 +73,18 @@ sourceSets {
 			srcDirs("src/main/kotlin")
 		}
 	}
+}
+
+allOpen {
+	annotation("jakarta.persistence.Entity")
+	annotation("jakarta.persistence.MappedSuperclass")
+	annotation("jakarta.persistence.Embeddable")
+}
+
+noArg {
+	annotation("jakarta.persistence.Entity")
+	annotation("jakarta.persistence.Embeddable")
+	annotation("jakarta.persistence.MappedSuperclass")
 }
 
 // Protocol Buffers
