@@ -52,6 +52,9 @@ dependencies {
 	kapt("com.querydsl:querydsl-apt:5.0.0:jakarta")
 	kapt("org.springframework.boot:spring-boot-configuration-processor")
 
+	// Instancio for test data generation
+	testImplementation("org.instancio:instancio-junit:5.0.1")
+
 	// Testcontainers
 	testImplementation("org.testcontainers:junit-jupiter:1.18.0")
 	testImplementation("org.testcontainers:mysql:1.18.0")
