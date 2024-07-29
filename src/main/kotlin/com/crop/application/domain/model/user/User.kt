@@ -10,15 +10,16 @@ class User(
   val role: Role
 ) {
   companion object {
-    fun createUser(
-      email: String,
-      password: String,
-      name: String,
-      phoneNumber: String,
-      country: String,
-      role: Role
-    ): User {
-      return User(null, email, password, name, phoneNumber, country, role)
+    fun createUser(command: CreateUserCommand): User {
+      return User(
+        null,
+        command.email,
+        command.password,
+        command.name,
+        command.phoneNumber,
+        command.country,
+        command.role
+      )
     }
   }
 }

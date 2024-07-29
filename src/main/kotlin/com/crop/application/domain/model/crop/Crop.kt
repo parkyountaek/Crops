@@ -6,8 +6,8 @@ class Crop(
   val userId: Long
 ) {
   companion object {
-    fun createCrop(name: String, userId: Long): Crop {
-      return Crop(null, name, userId)
+    fun createCrop(command: CreateCropCommand): Crop {
+      return Crop(null, command.name, command.userId)
     }
   }
 }

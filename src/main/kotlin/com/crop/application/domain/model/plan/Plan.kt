@@ -11,19 +11,21 @@ class Plan(val planId: Long?,
 ) {
 
   companion object {
-    fun createPlan(title: String, content: String, imgPath: MutableList<String>, user: User): Plan {
+    fun createPlan(command: CreatePlanCommand): Plan {
+      val user = command.user
       if (Role.TEAM_LEADER == user.role) {
-        return Plan(null, title, content, imgPath, user)
+        return Plan(null, command.title, command.content, command.imgPath, user)
       }
       throw RuntimeException("Not Accept")
     }
   }
 
-  fun updatePlan(title: String, content: String, imgPath: MutableList<String>, user: User) {
+  fun updatePlan(command: UpdatePlanCommand) {
+    val user = command.user
     if (Role.TEAM_LEADER == user.role) {
-      this.title = title
-      this.content = content
-      this.imgPath = imgPath
+      this.title = command.title
+      this.content = command.content
+      this.imgPath = command.imgPath
       this.user = user
     }
     throw RuntimeException("Not Accept")
