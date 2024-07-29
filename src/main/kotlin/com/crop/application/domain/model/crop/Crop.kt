@@ -1,4 +1,4 @@
-package crop.application.domain.model.crop
+package com.crop.application.domain.model.crop
 
 class Crop(
   val cropId: Long?,

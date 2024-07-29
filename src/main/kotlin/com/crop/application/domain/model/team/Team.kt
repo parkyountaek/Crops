@@ -1,6 +1,6 @@
-package crop.application.domain.model.team
+package com.crop.application.domain.model.team
 
-import crop.application.domain.model.user.User
+import com.crop.application.domain.model.user.User
 
 class Team(val teamId: Long?,
            val users: MutableSet<User>) {

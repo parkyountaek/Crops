@@ -3,12 +3,12 @@ import com.google.protobuf.gradle.*
 plugins {
 	id("org.springframework.boot") version "3.1.0"
 	id("io.spring.dependency-management") version "1.1.0"
-	kotlin("jvm") version "1.8.0"
-	kotlin("plugin.spring") version "1.8.0"
-	kotlin("plugin.jpa") version "1.8.0"
-	kotlin("plugin.allopen") version "1.8.0"
-	kotlin("plugin.noarg") version "1.8.0"
-	kotlin("kapt") version "1.8.0"
+	kotlin("jvm") version "1.9.10"
+	kotlin("plugin.spring") version "1.9.10"
+	kotlin("plugin.jpa") version "1.9.10"
+	kotlin("plugin.allopen") version "1.9.10"
+	kotlin("plugin.noarg") version "1.9.10"
+	kotlin("kapt") version "1.9.10"
 	id("com.google.protobuf") version "0.9.3"
 }
 
@@ -18,8 +18,7 @@ java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
 	mavenCentral()
-	google() // 추가 저장소
-	maven { url = uri("https://plugins.gradle.org/m2/") } // 추가 저장소
+	google()
 }
 
 dependencies {
@@ -33,20 +32,25 @@ dependencies {
 
 	// Database
 	runtimeOnly("com.h2database:h2")
-	runtimeOnly("mysql:mysql-connector-java:8.0.33") // 명시적으로 버전 추가
+	runtimeOnly("mysql:mysql-connector-java:8.0.33")
 
 	// gRPC
 	implementation("io.grpc:grpc-kotlin-stub:1.4.0")
-	implementation("io.grpc:grpc-netty-shaded:1.55.1") // 최신 버전으로 변경
-	implementation("io.grpc:grpc-protobuf:1.56.0") // 최신 버전으로 변경
-	implementation("io.grpc:grpc-stub:1.56.0") // 최신 버전으로 변경
+	implementation("io.grpc:grpc-netty-shaded:1.56.0")
+	implementation("io.grpc:grpc-protobuf:1.56.0")
+	implementation("io.grpc:grpc-stub:1.56.0")
 
 	// Protocol Buffers
 	implementation("com.google.protobuf:protobuf-java:3.24.0")
 
 	// QueryDSL
-	implementation("com.querydsl:querydsl-jpa:5.0.0")
-	kapt("com.querydsl:querydsl-apt:5.0.0:jpa")
+	implementation("com.querydsl:querydsl-jpa:5.0.0:jakarta")
+	implementation("com.querydsl:querydsl-apt:5.0.0:jakarta")
+	implementation("jakarta.persistence:jakarta.persistence-api")
+	implementation("jakarta.annotation:jakarta.annotation-api")
+
+	kapt("com.querydsl:querydsl-apt:5.0.0:jakarta")
+	kapt("org.springframework.boot:spring-boot-configuration-processor")
 
 	// Testcontainers
 	testImplementation("org.testcontainers:junit-jupiter:1.18.0")
@@ -70,7 +74,10 @@ kapt {
 sourceSets {
 	main {
 		java {
-			srcDirs("src/main/kotlin")
+			srcDirs("src/main/kotlin", "build/generated/source/kapt/main")
+		}
+		proto {
+			srcDir("src/main/proto")
 		}
 	}
 }
@@ -87,14 +94,13 @@ noArg {
 	annotation("jakarta.persistence.MappedSuperclass")
 }
 
-// Protocol Buffers
 protobuf {
 	protoc {
 		artifact = "com.google.protobuf:protoc:3.24.0"
 	}
 	plugins {
 		id("grpc") {
-			artifact = "io.grpc:protoc-gen-grpc-java:1.55.0"
+			artifact = "io.grpc:protoc-gen-grpc-java:1.56.0"
 		}
 		id("grpckt") {
 			artifact = "io.grpc:protoc-gen-grpc-kotlin:1.4.0:jdk8@jar"

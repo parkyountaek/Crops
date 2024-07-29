@@ -1,6 +1,6 @@
-package crop.application.domain.model.plan
+package com.crop.application.domain.model.plan
 
-import crop.application.domain.model.user.User
+import com.crop.application.domain.model.user.User
 
 data class UpdatePlanCommand(
   val title: String,

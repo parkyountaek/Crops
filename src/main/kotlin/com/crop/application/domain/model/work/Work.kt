@@ -1,4 +1,4 @@
-package crop.application.domain.model.work
+package com.crop.application.domain.model.work
 
 class Work(val workId: Long?,
            val planId: Long,

@@ -1,4 +1,4 @@
-package crop.application
+package com.crop.application
 
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication

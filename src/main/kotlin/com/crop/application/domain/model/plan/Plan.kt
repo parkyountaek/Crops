@@ -1,7 +1,7 @@
-package crop.application.domain.model.plan
+package com.crop.application.domain.model.plan
 
-import crop.application.domain.model.user.Role
-import crop.application.domain.model.user.User
+import com.crop.application.domain.model.user.Role
+import com.crop.application.domain.model.user.User
 
 class Plan(val planId: Long?,
   var title: String,

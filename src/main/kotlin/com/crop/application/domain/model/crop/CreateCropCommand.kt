@@ -1,4 +1,4 @@
-package crop.application.domain.model.crop
+package com.crop.application.domain.model.crop
 
 data class CreateCropCommand(
   val name: String,
