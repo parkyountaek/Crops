@@ -5,9 +5,6 @@ C
 settings.gradle.kts,7/4/749edfcc96398253e5b3416184e95c46621da850
 †
 Vsrc/main/kotlin/com/crop/application/adapter/out/persistence/entity/base/BaseEntity.kt,6/e/6ed678d9bb467bba1f2946d79c2ede39133e24bd
-:
-
-.gitignore,a/5/a5cc2925ca8258af241be7e5b0381edf30266302
 n
 >src/main/kotlin/com/crop/application/domain/model/team/Team.kt,8/b/8bcad9158925ce100342c2e26307c1e541f680e6
 n
