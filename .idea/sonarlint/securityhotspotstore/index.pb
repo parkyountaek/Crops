@@ -11,8 +11,6 @@ n
 >src/main/kotlin/com/crop/application/domain/model/crop/Crop.kt,d/4/d4fe5cf63b93f03d2b1acae7f2c29912328acaaa
 {
 Ksrc/main/kotlin/com/crop/application/domain/model/crop/CreateCropCommand.kt,8/b/8beade9cf3525a826d17a967eeb73005da72579e
-{
-Ksrc/main/kotlin/com/crop/application/domain/model/plan/UpdatePlanCommand.kt,4/5/456036ccfffbea97a33e2b7cadc1325168e6c367
 n
 >src/main/kotlin/com/crop/application/domain/model/work/Work.kt,8/0/80ac4c66948cc0562f756cd4fc81c4c88d08cc97
 {
