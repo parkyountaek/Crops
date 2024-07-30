@@ -1,7 +1,7 @@
 package com.crop.application.domain.model.user
 
 class User(
-  val userId: Long?,
+  val userId: Long? = null,
   val email: String,
   val password: String,
   val name: String,
@@ -12,13 +12,12 @@ class User(
   companion object {
     fun createUser(command: CreateUserCommand): User {
       return User(
-        null,
-        command.email,
-        command.password,
-        command.name,
-        command.phoneNumber,
-        command.country,
-        command.role
+        email = command.email,
+        password = command.password,
+        name = command.name,
+        phoneNumber = command.phoneNumber,
+        country = command.country,
+        role = command.role
       )
     }
   }

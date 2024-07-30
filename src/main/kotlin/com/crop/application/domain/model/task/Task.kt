@@ -1,13 +1,14 @@
-package com.crop.application.domain.model.work
+package com.crop.application.domain.model.task
 
-class Work(val workId: Long?,
-           val planId: Long,
-var content: String,
-  var imgPath: MutableList<String>,
-  ) {
+class Task(
+  val workId: Long? = null,
+  val planId: Long? = null,
+  var content: String,
+  var imgPaths: MutableList<String>,
+) {
   companion object {
-    fun createWork(planId: Long, content: String, imgPath: MutableList<String>): Work {
-      return Work(null, planId, content, imgPath)
+    fun createTask(planId: Long, content: String, imgPaths: MutableList<String>): Task {
+      return Task(planId = planId, content = content, imgPaths = imgPaths)
     }
   }
 

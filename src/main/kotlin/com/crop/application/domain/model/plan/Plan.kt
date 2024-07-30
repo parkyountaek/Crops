@@ -3,7 +3,8 @@ package com.crop.application.domain.model.plan
 import com.crop.application.domain.model.user.Role
 import com.crop.application.domain.model.user.User
 
-class Plan(val planId: Long?,
+class Plan(
+  val planId: Long? = null,
   var title: String,
   var content: String,
   var imgPath: MutableList<String>,
@@ -14,7 +15,7 @@ class Plan(val planId: Long?,
     fun createPlan(command: CreatePlanCommand): Plan {
       val user = command.user
       if (Role.TEAM_LEADER == user.role) {
-        return Plan(null, command.title, command.content, command.imgPath, user)
+        return Plan(title = command.title, content = command.content, imgPath = command.imgPath, user = user)
       }
       throw RuntimeException("Not Accept")
     }
